@@ -37,7 +37,7 @@ function wlc_rainbow_prompt--setup {
 
 
 		local gitBranchInfo=`__git_ps1`
-		if [ $WLC_RAINBOW_PROMPT___SHOULD_USE_DETAILED_BUT_SLOW_GIT_BRANCH_INFO_QUERY = yes ]; then
+		if [ $WLC_RAINBOW_PROMPT___SHOULD_USE_DETAILED_BUT_SLOW_GIT_BRANCH_INFO_QUERY == 'yes' ]; then
 			gitBranchInfo=${gitBranchInfo:2:-1}
 		fi
 
@@ -70,7 +70,7 @@ function wlc_rainbow_prompt--setup {
 
 
 		local gitBranchInfo=`__git_ps1`
-		if [ $WLC_RAINBOW_PROMPT___SHOULD_USE_DETAILED_BUT_SLOW_GIT_BRANCH_INFO_QUERY = yes ]; then
+		if [ $WLC_RAINBOW_PROMPT___SHOULD_USE_DETAILED_BUT_SLOW_GIT_BRANCH_INFO_QUERY == 'yes' ]; then
 			gitBranchInfo=${gitBranchInfo:2:-1}
 		fi
 
@@ -107,7 +107,7 @@ function wlc_rainbow_prompt--setup {
 		)
 
 		local gitBranchInfo=`__git_ps1`
-		if [ $WLC_RAINBOW_PROMPT___SHOULD_USE_DETAILED_BUT_SLOW_GIT_BRANCH_INFO_QUERY = yes ]; then
+		if [ $WLC_RAINBOW_PROMPT___SHOULD_USE_DETAILED_BUT_SLOW_GIT_BRANCH_INFO_QUERY == 'yes' ]; then
 			gitBranchInfo=${gitBranchInfo:2:-1}
 		fi
 
