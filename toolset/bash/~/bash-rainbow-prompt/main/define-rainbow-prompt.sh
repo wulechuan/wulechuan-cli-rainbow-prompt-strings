@@ -143,7 +143,7 @@ function wlc_rainbow_prompt--setup {
 		)
 
 		local gitBranchInfo=`__git_ps1`
-		if [ $WLC_RAINBOW_PROMPT___SHOULD_USE_DETAILED_BUT_SLOW_GIT_BRANCH_INFO_QUERY = yes ]; then
+		if [ $WLC_RAINBOW_PROMPT___SHOULD_USE_DETAILED_BUT_SLOW_GIT_BRANCH_INFO_QUERY == 'yes' ]; then
 			gitBranchInfo=${gitBranchInfo:2:-1}
 		fi
 
@@ -169,7 +169,7 @@ function wlc_rainbow_prompt--setup {
 	fi
 
 
-	if [ $WLC_RAINBOW_PROMPT___SHOULD_USE_DETAILED_BUT_SLOW_GIT_BRANCH_INFO_QUERY != "yes" ]; then
+	if [ $WLC_RAINBOW_PROMPT___SHOULD_USE_DETAILED_BUT_SLOW_GIT_BRANCH_INFO_QUERY != 'yes' ]; then
 		tempShouldTryLoadGNU__git_ps1=0
 	fi
 
@@ -226,7 +226,7 @@ function wlc_rainbow_prompt--setup {
 			export PROMPT_COMMAND='build_rainbow_prompt_with_git_branch_info--in_16_colored_mode--and_set_colors_to_text';
 		fi
 	else
-		if [ "$WLC_RAINBOW_PROMPT___COLORS_ARE_IN_BACKGROUND_INSTEAD_OF_TEXTS" = 'yes' ]; then
+		if [ "$WLC_RAINBOW_PROMPT___COLORS_ARE_IN_BACKGROUND_INSTEAD_OF_TEXTS" == 'yes' ]; then
 			export PROMPT_COMMAND='build_rainbow_prompt_with_git_branch_info--in_256_colored_mode--and_set_colors_to_background'
 		else
 			export PROMPT_COMMAND='build_rainbow_prompt_with_git_branch_info--in_256_colored_mode--and_set_colors_to_text'
